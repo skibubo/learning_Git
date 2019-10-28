@@ -1,0 +1,81 @@
+<html>
+<head>
+<script type="text/javascript">
+function validate()
+{
+if(document.form1.name.value=="")
+{alert("please fill in your first name")
+document.form1.name.focus();
+return false;
+}
+else if(document.form1.name.value=="")
+{
+alert("Please fill in your second name");
+return false
+}
+else if (document.form1.email.value=="")
+{
+aler("Please fill in your email address");
+return false;
+}
+else if(documenr.form1.email.value!="")
+{
+var string1=document.form1.email.value;
+if(strin1.index of("@")==1)
+{
+alert("Please input a valid email address");
+}
+}
+else if(document.form1.pword.value=="")
+{
+alert("Please fill your password");
+return false;
+}
+else if(document.form1.pword.value.length<7)
+{
+alert("You must enter a password with more than seven characters");
+return false;
+}
+else if((document.form1.gender[0].check==false)&&(document.form1.gender[1].check==false))
+{
+alert("Please specify your gender");
+return false;
+}
+else if((document.form1.package[0].checked==false)&&(document.form1.package[1].checked==false))
+{
+alert("please specify your package");
+}
+else if(document.form1.continent.select index==0)
+{
+alert("please select your continent");
+return false;
+}
+return true;
+}
+</script></head>
+<body>
+<form name="form1"onsubmit="return vallidate()">
+First Name:<input type"text"name="name"><br>
+Second Name:<input type"text"name="name2"><br>
+Email:<input type"text"name="email"><br>
+Password:<input type"text"name="pword"><br>
+Please specify your gender
+male<input type="radio"name="gender"value="Male">
+Female<input type="radio"name="gender"value="female">
+<p><h2>which package would you like</h2></p>
+Adventure<input name="Package"type="check box"value="adventure"/>
+Surfing<input name="Package"type="check box"value="Surfing"/>
+Game hunting<input name="Package"type="check box"value="Hunting"/>
+<p><h2>select your continet</h2></p>
+<select name="continent">
+<option selected="selected">select continet</option>
+<option>South America</option>
+<option> Africa</option>
+<option> Asia</option>
+<option>Europe</option>
+<input type="submit"value"SUBMIT">
+</form>
+</body>
+</html>
+
+

@@ -1,0 +1,9 @@
+<html>
+<head></head>
+<body>
+<? php
+&strName="johnson";
+echo &strName;
+?>
+</body>
+</html>

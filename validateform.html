@@ -1,0 +1,171 @@
+<html>
+<head>
+<script type="text/javascript">
+<!--
+function validate1()
+
+
+{
+  
+
+if ( document.form1.name.value == "" )
+ 
+   {
+      alert ( "Please fill in your first name." );
+      
+       document.form1.name.focus();
+       return false;
+ }
+
+
+
+else if ( document.form1.name2.value == "")
+ 
+
+   {
+        alert ( "Please fill in your second name." );
+       return false;
+   }
+
+
+else if ( document.form1.email.value == "" )
+
+   {    
+       alert ( "Please fill in your Email Address." );
+       return false;
+   }
+
+
+
+else if (document.form1.email.value !="")
+{
+var string1= document.form1.email.value 
+
+if (string1.indexOf("@")==-1)
+{
+
+alert("Please input a valid email address!")
+return false;
+
+}}
+
+
+else if ( document.form1.pword.value == "" )
+
+   {    
+       alert ( "Please fill in your password." );
+       return false;
+   }
+
+
+
+
+else if (document.form1.pword.value.length < 7) 
+
+    {
+	
+     alert("Must enter a password 7 characters long.");
+     return false;
+
+     }
+
+
+
+
+else if (( document.form1.gender[0].checked == false ) && ( document.form1.gender[1].checked == false ))
+
+  { 
+alert ( "Please specify your gender." );
+ 
+return false;
+  } 
+
+
+
+else if (( document.form1.package[0].checked == false ) && ( document.form1.package[1].checked == false ))
+
+
+
+  { 
+alert ( "Please specify your package." );
+ 
+return false;
+  } 
+
+
+
+else if ( document.form1.continent.selectedIndex == 0 ) 
+
+  { alert ( "Please select your continent." );
+ 
+return false;
+ } 
+
+
+return true;
+}
+
+
+
+//-->
+</script>
+
+</head>
+
+
+
+
+<body>
+<form name="form1"  onsubmit="return validate1();" >
+
+
+FirstName: <input type="text" name="name"></br >
+
+SeconName: <input type="text" name="name2"></br >
+
+Email: <input type="text" name="email"></br >
+
+Password: <input type="text" name="pword"></br >
+
+
+Please specify Your Gender
+Male <input type="radio" name="gender" value="male"> 
+Female<input type="radio" name="gender" value="male">
+
+
+<p><h2>Which package would you like</h2></p>
+
+
+
+
+Adventure<input name="package" type="checkbox" value="adventure" />
+     
+Surfing<input name="package" type="checkbox" value="seasurfing" />             
+
+Game hunting<input name="package" type="checkbox" value="hunting" />  
+
+
+
+
+<p><h2>Select your continent</h2></p>
+<select name="continent">                                        
+                   
+                    
+                   <OPTION selected="selected">select-continent</OPTION> 
+                     <OPTION>South America</OPTION> 
+                    <OPTION>North America</OPTION> 
+                    <OPTION>Australia</OPTION>  
+                    <OPTION>Africa</OPTION> 
+                    <OPTION>New Zealand</OPTION> 
+                    <OPTION>Europe</OPTION>
+                    <OPTION>Asia</OPTION> 
+                    </SELECT></TD></TR> 
+
+
+
+<input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
